@@ -1,14 +1,18 @@
 set belloff=all
+set breakindent
 set colorcolumn=80
 set cursorline
 set expandtab
+set formatoptions=l
 set history=1000
 set ignorecase
 set incsearch
+set lbr
 set mouse=a
 set nobackup
 set nocompatible
 set number
+set path+=**
 set scrolloff=10
 set shiftwidth=2
 set showcmd
@@ -21,4 +25,4 @@ set softtabstop=2
 set tabstop=2
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest,list,full
