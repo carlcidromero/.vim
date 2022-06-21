@@ -26,6 +26,7 @@ set smartcase
 set smartindent
 set softtabstop=2
 set tabstop=2
+set timeoutlen=250
 set undodir=/tmp//
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set wildmenu
