@@ -1,9 +1,12 @@
+set backupdir=/tmp//
 set belloff=all
 set breakindent
+set directory=/tmp//
 set colorcolumn=80
 set cursorline
 set expandtab
 set formatoptions=l
+set hidden
 set history=1000
 set ignorecase
 set incsearch
@@ -23,6 +26,7 @@ set smartcase
 set smartindent
 set softtabstop=2
 set tabstop=2
+set undodir=/tmp//
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set wildmenu
 set wildmode=longest,list,full
