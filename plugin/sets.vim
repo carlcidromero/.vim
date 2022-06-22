@@ -1,5 +1,6 @@
 set backupdir=/tmp//
 set belloff=all
+set bg=dark
 set breakindent
 set directory=/tmp//
 set colorcolumn=80

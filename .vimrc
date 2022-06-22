@@ -15,6 +15,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin()
 
+Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -47,3 +48,4 @@ Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = ['jsx']
 
 call plug#end()
+

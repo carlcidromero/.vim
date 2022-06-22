@@ -2,7 +2,7 @@
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
-colorscheme molokai
+colorscheme gruvbox
 
 filetype indent on
 filetype on
