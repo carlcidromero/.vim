@@ -8,12 +8,14 @@ set cmdheight=2
 set cursorline
 set encoding=utf-8
 set expandtab
+set fileformat=unix
 set formatoptions=l
 set hidden
 set history=1000
 set ignorecase
 set incsearch
-set lbr
+set laststatus=2
+set linebreak
 set mouse=a
 set nobackup
 set nocompatible
@@ -32,6 +34,7 @@ set smartcase
 set smartindent
 set softtabstop=2
 set tabstop=2
+set textwidth=80
 set timeoutlen=250
 set undodir=/tmp//
 set updatetime=300
