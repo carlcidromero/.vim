@@ -12,16 +12,28 @@ autocmd CursorHold * :call <SID>show_hover_doc()
 " Highlight symbol and references
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Tab for auto-complete
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-fun! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1] =~# '\s'
-endfun
+" Tab and shift-tab navigate auto-complete suggestions
+inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" Tab selects auto-complete suggestion
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ CheckBackspace() ?
+"       \ '\<C-g>u\<TAB>' :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? '\<C-p>' : '\<C-h>'
+" fun! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1] =~# '\s'
+" endfun
+
+" Spacebar triggers completion
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 " Navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -33,3 +45,6 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Rename symbol
 nmap <leader>rn <Plug>(coc-rename)
+
+" Code actions
+nmap <leader>do <Plug>(coc-codeaction)
