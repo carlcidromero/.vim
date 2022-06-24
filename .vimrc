@@ -1,3 +1,6 @@
+" mapleader has to be defined before coc installs for symbol renaming
+let mapleader='"'
+
 " vscode vimrc (currently only supports remapping)
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -31,6 +34,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 """ Coc plugins
 let g:coc_global_extensions=[
       \ 'coc-css',
+      \ 'coc-emmet',
       \ 'coc-html',
       \ 'coc-json',
       \ 'coc-lists',
